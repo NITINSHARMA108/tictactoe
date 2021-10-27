@@ -5,6 +5,7 @@ let personPlay=document.getElementById('person');
 let player1;
 let player2;
 let isComputerPlaying=false;
+let winnerDeclared=false;
 
 // Player object
 function Player(name)
@@ -97,10 +98,12 @@ function checker(){
             if(turn%2!=0)
             {
                 document.getElementById('winner-declaration').innerHTML=`${player2.name} is the winner`;
+                winnerDeclared=true;
                 return true;
             }
             else{
                 document.getElementById('winner-declaration').innerHTML=`${player1.name} is the winner`;
+                winnerDeclared=true;
                 return true;
             }
             
@@ -117,7 +120,10 @@ function checker(){
 
 //filling the field of tic-tac-toe
 function fillField(x){
-    
+    if(winnerDeclared===true){
+        window.alert('result is declared already!!');
+        return;
+    }
     console.log(turn);
     //console.log(x.getAttribute('data'));
     if(x.getAttribute('data')=='vacant')
@@ -147,7 +153,7 @@ async function player1Fill(x){
     x.setAttribute('data','filled');
     //setTimeout(1000);
     turn++;
-    let res=checker()
+    let res=checker();
 
     if(res===false)
     {
@@ -163,6 +169,7 @@ function player2Fill(x){
     x.value='0';
     x.setAttribute('data','filled');
     turn++;
+    checker();
 }
 
 //fill by computer
@@ -195,4 +202,5 @@ function reset()
     }
     document.getElementById('winner-declaration').innerHTML='';
     turn=1;
+    winnerDeclared=false;
 }
