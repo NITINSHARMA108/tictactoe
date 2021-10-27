@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tic-Tae-Toe</title>
+</head>
+<body>
+    <div class="information" style="text-align:center;">
+        <h3>Player 1 plays as X</h3>
+        <h3>Player 2 plays as 0</h3>
+    </div>
+    <div class="buttons">
+        <button id="computer">Play with computer</button>
+        <button id="person">2 Player</button>
+    </div>
+    
+    <div class="play">
+        <div class="container">
+            
+                
+                <input type="text" class="column" onclick="fillField(this)" id="1" data="vacant" readonly/>
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="2" readonly/>
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="3" readonly/>
+            
+            
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="4" readonly/>
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="5" readonly/>
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="6" readonly/>
+            
+            
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="7" readonly />
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="8" readonly/>
+                <input type="text" class="column" onclick="fillField(this)" data="vacant" id="9" readonly />
+            
+        </div>
+        <div>
+            <h1 id="winner-declaration" style="color:black;text-align:center;"></h1>
+        </div>
+        <div style="display:flex;justify-content:center;">
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<script>
+    
+</script>
+</html>
