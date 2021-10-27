@@ -29,7 +29,6 @@ button{
 }
 .container{
     width:40%;
-    
     background-color:white;
     margin:auto;
     display:flex;
@@ -37,7 +36,6 @@ button{
     flex-wrap:wrap;
     justify-content:space-around;
     border:1px solid black;
-    
 }
 
 
@@ -64,21 +62,8 @@ input{
 /*button{
     background-color:white;
 }*/
-@media screen and (max-width:400px){
-    .container{
-        width:100%;
-    }
-}
 
-@media screen and (min-width:769px){
-    .column{
-        font-size:1.5em;
-        height:40px;
-    }
-    
-
-}
-@media screen and (max-width:768px){
+@media screen and (min-width:401px) and (max-width:768px){
     .column{
         font-size:1em;
         height:30px;
@@ -88,4 +73,22 @@ input{
     }
 
     
+}
+@media screen and (max-width:400px){
+    .container{
+        width:100%;
+    }
+    .column{
+        height:30px;
+    }
+}
+
+
+@media screen and (min-width:769px){
+    .column{
+        font-size:1.5em;
+        height:40px;
+    }
+    
+
 }

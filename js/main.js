@@ -19,7 +19,7 @@ personPlay.addEventListener('click',function(){
     let play1=window.prompt('enter name of player1');
     console.log(play1);
     player1=new Player(play1);
-    let play2=window.prompt('enter name of player2');
+    let play2=window.prompt('Enter Name of player2');
     player2=new Player(play2);
     console.log(player2.name);
 }
@@ -28,7 +28,7 @@ personPlay.addEventListener('click',function(){
 computerPlay.addEventListener('click',function(){
     document.querySelector('.buttons').style.display='none';
     document.querySelector('.play').style.display='block';
-    let play1=window.prompt('enter name of player1');
+    let play1=window.prompt('Enter Name of player');
     console.log(play1);
     player1=new Player(play1);
     player2=new Player('computer');
@@ -80,9 +80,10 @@ function checkwinner(){
         return true;
     }
     else{
-        if(turn==9)
+        if(turn==10)
         {
-            window.alert('no one wins');
+            document.getElementById('winner-declaration').innerHTML='no one wins';
+            winnerDeclared=true;
         }
             
     }
@@ -203,4 +204,10 @@ function reset()
     document.getElementById('winner-declaration').innerHTML='';
     turn=1;
     winnerDeclared=false;
+}
+
+function newgame(){
+    reset();
+    document.querySelector('.play').style.display='none';
+    document.querySelector('.buttons').style.display='block';
 }
