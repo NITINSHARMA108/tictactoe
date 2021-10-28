@@ -16,7 +16,7 @@ function Player(name)
 personPlay.addEventListener('click',function(){
     document.querySelector('.buttons').style.display='none';
     document.querySelector('.play').style.display='block';
-    let play1=window.prompt('enter name of player1');
+    let play1=window.prompt('Enter Name of player1');
     console.log(play1);
     player1=new Player(play1);
     let play2=window.prompt('Enter Name of player2');
@@ -210,4 +210,5 @@ function newgame(){
     reset();
     document.querySelector('.play').style.display='none';
     document.querySelector('.buttons').style.display='block';
+    isComputerPlaying=false;
 }
